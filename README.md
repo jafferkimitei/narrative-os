@@ -55,25 +55,6 @@ Motion communicates context switching, not decoration:
 - Calm transitions (300-600ms)
 - Predictive, not reactive
 
-## Visual System
-
-**Color Palette**:
-- Off-white background (#fafaf9)
-- Pure white for cards
-- Muted blue accent (#60a5fa) - appears only on intent
-- Neutral grays for hierarchy
-
-**Typography**:
-- Inter for clean, editorial feel
-- Strong hierarchy
-- Tight tracking (-0.01em)
-- Short, declarative statements
-
-**Layout**:
-- Modular, OS-inspired
-- Large negative space
-- Grid-based but not rigid
-- Content breathes
 
 ## Technical Architecture
 
@@ -109,14 +90,6 @@ Content blocks are defined in `narrative.ts` with:
 4. **Press ⌘K** → Alternative command palette trigger
 5. **Hover Evidence** → Subtle accent highlight
 
-## What This Proves
-
-- You design adaptive systems, not static artifacts
-- You understand audience-aware UX
-- You respect attention economics
-- You think in interfaces and operating systems
-- You operate at senior-to-principal level
-
 ## Customization
 
 To adapt this for your own work:
@@ -137,5 +110,4 @@ To adapt this for your own work:
 
 ---
 
-**Positioning**: This isn't a portfolio piece. It's a new category.
 # narrative-os
