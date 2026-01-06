@@ -1,5 +1,6 @@
 # NarrativeOS — Resume Reimagined
 
+
 ## Concept
 
 NarrativeOS transforms a traditional resume from a static document into an adaptive storytelling system that reconfigures itself based on viewer intent.
@@ -13,7 +14,8 @@ Four persona modes that fundamentally change how content is presented:
 - **Engineer Mode**: Depth & systems. Architecture, tradeoffs, technical decisions, code-level thinking
 - **Founder Mode**: Leverage & vision. Business impact, velocity, ownership signals
 - **AI Reviewer Mode**: Machine-readable identity. Structured data, explicit metrics, verifiable links
-
+![Recruiter Mode](./public/Screen1.jpg)
+![Engineer Mode](./public/Screen2.jpg)
 ### 2. Dynamic Content Weighting
 Each content block has a weight (1-10) for each persona mode. The system:
 - Reorders content based on relevance
