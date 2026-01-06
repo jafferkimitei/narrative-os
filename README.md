@@ -15,14 +15,14 @@ Four persona modes that fundamentally change how content is presented:
 - **Founder Mode**: Leverage & vision. Business impact, velocity, ownership signals
 - **AI Reviewer Mode**: Machine-readable identity. Structured data, explicit metrics, verifiable links
 ![Recruiter Mode](./public/Screen1.jpg)
-![Engineer Mode](./public/Screen2.jpg)
+
 ### 2. Dynamic Content Weighting
 Each content block has a weight (1-10) for each persona mode. The system:
 - Reorders content based on relevance
 - Adjusts visual emphasis (opacity, scale)
 - Changes narrative density
 - Reveals different evidence
-
+![Engineer Mode](./public/Screen2.jpg)
 ### 3. Evidence-First Presentation
 No claims without proof. Each achievement includes:
 - Metrics
