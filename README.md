@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NarrativeOS — Resume Reimagined
 
-## Getting Started
+## Concept
 
-First, run the development server:
+NarrativeOS transforms a traditional resume from a static document into an adaptive storytelling system that reconfigures itself based on viewer intent.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Core Features
+
+### 1. Intent-Based Adaptation
+Four persona modes that fundamentally change how content is presented:
+
+- **Recruiter Mode**: Clarity & signal. High-level outcomes, scannable timelines, minimal jargon
+- **Engineer Mode**: Depth & systems. Architecture, tradeoffs, technical decisions, code-level thinking
+- **Founder Mode**: Leverage & vision. Business impact, velocity, ownership signals
+- **AI Reviewer Mode**: Machine-readable identity. Structured data, explicit metrics, verifiable links
+
+### 2. Dynamic Content Weighting
+Each content block has a weight (1-10) for each persona mode. The system:
+- Reorders content based on relevance
+- Adjusts visual emphasis (opacity, scale)
+- Changes narrative density
+- Reveals different evidence
+
+### 3. Evidence-First Presentation
+No claims without proof. Each achievement includes:
+- Metrics
+- Demos
+- Links to artifacts
+- Code samples
+- Before/after comparisons
+
+### 4. Evidence-Only Mode
+Bold toggle that strips all narrative, leaving only:
+- Verifiable metrics
+- Links
+- Demos
+- Timeline data
+- Tech stack
+
+This mode demonstrates extreme confidence and transparency.
+
+### 5. Command Palette
+Easter egg activated by typing `/ask` or pressing `⌘K`:
+- Natural language queries about the work
+- Suggested explorations
+- Context-aware responses
+- Feels like conversing with the resume
+
+## Motion Philosophy
+
+Motion communicates context switching, not decoration:
+- No bounce or elastic easing
+- Custom cubic-bezier curves
+- Fast feedback (<100ms)
+- Calm transitions (300-600ms)
+- Predictive, not reactive
+
+## Visual System
+
+**Color Palette**:
+- Off-white background (#fafaf9)
+- Pure white for cards
+- Muted blue accent (#60a5fa) - appears only on intent
+- Neutral grays for hierarchy
+
+**Typography**:
+- Inter for clean, editorial feel
+- Strong hierarchy
+- Tight tracking (-0.01em)
+- Short, declarative statements
+
+**Layout**:
+- Modular, OS-inspired
+- Large negative space
+- Grid-based but not rigid
+- Content breathes
+
+## Technical Architecture
+
+### Components
+- `SystemHeader` - Fixed navigation with OS aesthetic
+- `NarrativeHero` - Intent selection interface
+- `ModeIndicator` - Active mode description
+- `NarrativeContent` - Adaptive content blocks
+- `EvidenceToggle` - Evidence-only mode switcher
+- `CommandPalette` - /ask easter egg
+- `AmbientBackground` - Subtle animated atmosphere
+- `IntroSequence` - Initial load animation
+
+### Data Structure
+Content blocks are defined in `narrative.ts` with:
+```typescript
+{
+  id: string
+  type: "experience" | "project" | "insight" | "evidence"
+  title: string
+  content: { recruiter, engineer, founder, ai }
+  weight: { recruiter, engineer, founder, ai }
+  evidence: Array<{ type, label, value, url }>
+  metadata: { timeline, role, impact, stack }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Interaction Patterns
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Select Intent** → System morphs (no reload, smooth reflow)
+2. **Toggle Evidence** → Narrative strips away
+3. **Type /ask** → Command palette opens
+4. **Press ⌘K** → Alternative command palette trigger
+5. **Hover Evidence** → Subtle accent highlight
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What This Proves
 
-## Learn More
+- You design adaptive systems, not static artifacts
+- You understand audience-aware UX
+- You respect attention economics
+- You think in interfaces and operating systems
+- You operate at senior-to-principal level
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To adapt this for your own work:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Update `narrative.ts` with your experience
+2. Adjust weights for each persona mode
+3. Add your evidence (links, metrics, demos)
+4. Customize the visual theme in `theme.css`
+5. Modify persona descriptions in `ModeIndicator.tsx`
 
-## Deploy on Vercel
+## Easter Eggs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Type `/ask` anywhere to open command palette
+- Press `⌘K` for quick command access
+- Evidence-only mode shows raw confidence
+- Animated loading sequence on first visit
+- Subtle background animations respond to time
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Positioning**: This isn't a portfolio piece. It's a new category.
+# narrative-os
